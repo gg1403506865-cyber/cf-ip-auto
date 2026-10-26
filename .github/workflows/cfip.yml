@@ -1,0 +1,53 @@
+name: Cloudflare IP Auto Update
+
+on:
+  schedule:
+    # UTC 20:00 = 北京 04:00
+    - cron: '0 20 * * *'
+    # UTC 08:00 = 北京 16:00
+    - cron: '0 8 * * *'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  update:
+    runs-on: ubuntu-latest
+    timeout-minutes: 25
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Download cfst
+        run: |
+          curl -sSL --retry 3 --max-time 180 \
+            -o cfst.tar.gz \
+            https://github.com/XIU2/CloudflareSpeedTest/releases/download/v2.3.5/cfst_linux_amd64.tar.gz
+          tar -xzf cfst.tar.gz
+          chmod +x cfst
+          ./cfst -v || true
+
+      - name: Run speed test
+        run: |
+          set +e
+          ./cfst -f ip.txt -tl 200 -t 300 -dn 5 -p 20 -o result.csv
+          echo "exit=$?"
+          echo "--- raw result ---"
+          cat result.csv 2>/dev/null || echo "result.csv not created"
+
+      - name: Convert to JSON
+        run: python3 convert.py
+
+      - name: Commit result
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add result.json
+          if git diff --staged --quiet; then
+            echo "no change, skip commit"
+          else
+            git commit -m "chore: update cf ip $(date -u +%Y-%m-%dT%H:%M:%SZ)"
+            git push
+          fi
