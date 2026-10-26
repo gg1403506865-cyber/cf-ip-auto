@@ -19,43 +19,31 @@ jobs:
         uses: actions/checkout@v4
 
       - name: Download cfst
-        id: dl
-        continue-on-error: true
         run: |
-          set +e
-          {
-            echo "=== env ==="
-            uname -a
-            curl --version | head -1
-            echo "=== download ==="
-            curl -fSL --retry 3 --retry-delay 2 --max-time 180 \
-              -o cfst.tar.gz \
-              https://github.com/XIU2/CloudflareSpeedTest/releases/download/v2.3.5/cfst_linux_amd64.tar.gz
-            echo "curl_exit=$?"
-            ls -la cfst.tar.gz 2>&1
-            echo "=== extract ==="
-            tar -xzf cfst.tar.gz 2>&1
-            echo "tar_exit=$?"
-            ls -la
-            echo "=== chmod and run ==="
-            chmod +x cfst 2>&1
-            echo "chmod_exit=$?"
-            ./cfst -v 2>&1 | head -5
-            echo "cfst_exit=$?"
-          } > dl_diag.txt 2>&1
-          cat dl_diag.txt
+          curl -fSL --retry 3 --retry-delay 2 --max-time 180 \
+            -o cfst.tar.gz \
+            https://github.com/XIU2/CloudflareSpeedTest/releases/download/v2.3.5/cfst_linux_amd64.tar.gz
+          tar -xzf cfst.tar.gz
+          ls -la
+          if [ ! -f cfst_linux_amd64/cfst ]; then
+            echo "::error::cfst 二进制未找到，检查压缩包结构"
+            find . -maxdepth 3 -name 'cfst*' -type f
+            exit 1
+          fi
+          chmod +x cfst_linux_amd64/cfst
+          ./cfst_linux_amd64/cfst -v | head -3 || true
 
       - name: Run speed test
-        if: steps.dl.outcome == 'success'
         run: |
-          set +e
-          ./cfst -f ip.txt -tl 200 -t 300 -dn 5 -p 20 -o result.csv
-          echo "exit=$?"
+          ./cfst_linux_amd64/cfst -f ip.txt -tl 200 -t 300 -dn 5 -p 20 -o result.csv || true
           echo "--- raw result ---"
-          cat result.csv 2>/dev/null || echo "result.csv not created"
+          if [ ! -f result.csv ]; then
+            echo "::error::result.csv 未生成，测速失败"
+            exit 1
+          fi
+          cat result.csv
 
       - name: Convert to JSON
-        if: steps.dl.outcome == 'success'
         run: python3 convert.py
 
       - name: Commit result
@@ -63,16 +51,10 @@ jobs:
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add result.json dl_diag.txt 2>/dev/null || true
+          git add result.json
           if git diff --staged --quiet; then
             echo "no change, skip commit"
           else
             git commit -m "chore: update cf ip $(date -u +%Y-%m-%dT%H:%M:%SZ)"
             git push
           fi
-
-      - name: Fail if download broken
-        if: steps.dl.outcome != 'success'
-        run: |
-          echo "::error::下载步骤失败，详见 dl_diag.txt"
-          exit 1
