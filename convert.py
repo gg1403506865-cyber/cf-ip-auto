@@ -44,17 +44,29 @@ def parse_rows(path):
 def main():
     rows = parse_rows(CSV_PATH)
 
-    # 丢包的直接丢掉，再按速度降序、延迟升序
+    # 丢包的直接丢掉
     usable = [r for r in rows if r["loss"] == 0.0]
-    usable.sort(key=lambda x: (-x["speed_mbps"], x["latency_ms"]))
+
+    # 有速度数据就按速度排，没有就按延迟排（-dd 模式只测延迟）
+    has_speed = any(r["speed_mbps"] > 0 for r in usable)
+    if has_speed:
+        usable.sort(key=lambda x: (-x["speed_mbps"], x["latency_ms"]))
+        mode = "latency+speed"
+        warning = "速度由 GitHub 机房测出，不代表你的本地带宽，仅作可达性与相对排序参考"
+    else:
+        usable.sort(key=lambda x: x["latency_ms"])
+        mode = "latency_only"
+        warning = "仅测延迟未测速度。这是机房到 Cloudflare 的 RTT，不代表你的实际速度，只说明该 IP 当前可达"
+
     top = usable[:TOP_N]
 
     out = {
         "updated": datetime.datetime.now(datetime.timezone.utc).strftime("%Y-%m-%dT%H:%M:%SZ"),
         "count": len(top),
         "total_tested": len(rows),
+        "mode": mode,
         "source": "github-actions-runner",
-        "warning": "速度由 GitHub 机房测出，不代表你的本地带宽，仅作可达性与相对排序参考",
+        "warning": warning,
         "ips": top,
     }
 
