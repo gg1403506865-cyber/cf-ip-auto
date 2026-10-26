@@ -1,0 +1,28 @@
+=== env ===
+Linux runnervmtai0g 6.17.0-1022-azure #22-Ubuntu SMP Mon Jul 27 17:24:03 UTC 2026 x86_64 x86_64 x86_64 GNU/Linux
+curl 8.5.0 (x86_64-pc-linux-gnu) libcurl/8.5.0 OpenSSL/3.0.13 zlib/1.3 brotli/1.1.0 zstd/1.5.5 libidn2/2.3.7 libpsl/0.21.2 (+libidn2/2.3.7) libssh/0.10.6/openssl/zlib nghttp2/1.59.0 librtmp/2.3 OpenLDAP/2.6.10
+=== download ===
+  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+                                 Dload  Upload   Total   Spent    Left  Speed
+  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0
+100 3092k  100 3092k    0     0  14.7M      0 --:--:-- --:--:-- --:--:-- 14.7M
+curl_exit=0
+-rw-r--r-- 1 runner runner 3166688 Oct 26 13:56 cfst.tar.gz
+=== extract ===
+tar_exit=0
+total 3136
+drwxr-xr-x 5 runner runner    4096 Oct 26 13:56 .
+drwxr-xr-x 3 runner runner    4096 Oct 26 13:56 ..
+drwxr-xr-x 7 runner runner    4096 Oct 26 13:56 .git
+drwxr-xr-x 3 runner runner    4096 Oct 26 13:56 .github
+-rw-r--r-- 1 runner runner    4228 Oct 26 13:56 README.md
+-rw-r--r-- 1 runner runner 3166688 Oct 26 13:56 cfst.tar.gz
+drwxr-xr-x 2 runner runner    4096 Jul 27 08:45 cfst_linux_amd64
+-rw-r--r-- 1 runner runner    2009 Oct 26 13:56 convert.py
+-rw-r--r-- 1 runner runner     848 Oct 26 13:56 dl_diag.txt
+-rw-r--r-- 1 runner runner     410 Oct 26 13:56 ip.txt
+=== chmod and run ===
+chmod: cannot access 'cfst': No such file or directory
+chmod_exit=1
+/home/runner/work/_temp/6e2458e5-887f-4789-b7f8-a9282206b8ed.sh: line 19: ./cfst: No such file or directory
+cfst_exit=0
