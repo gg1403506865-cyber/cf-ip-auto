@@ -9,7 +9,7 @@ import sys
 
 CSV_PATH = "result.csv"
 JSON_PATH = "result.json"
-TOP_N = 10
+TOP_N = 50
 
 
 def parse_rows(path):
