@@ -1,8 +1,80 @@
 {
-  "updated": "2026-10-26T13:56:22Z",
-  "count": 0,
-  "total_tested": 0,
+  "updated": "2026-10-26T14:48:32Z",
+  "count": 10,
+  "total_tested": 35,
+  "mode": "latency_only",
   "source": "github-actions-runner",
-  "warning": "速度由 GitHub 机房测出，不代表你的本地带宽，仅作可达性与相对排序参考",
-  "ips": []
+  "warning": "仅测延迟未测速度。这是机房到 Cloudflare 的 RTT，不代表你的实际速度，只说明该 IP 当前可达",
+  "ips": [
+    {
+      "ip": "198.41.216.173",
+      "loss": 0.0,
+      "latency_ms": 2.24,
+      "speed_mbps": 0.0,
+      "colo": "N/A"
+    },
+    {
+      "ip": "198.41.197.204",
+      "loss": 0.0,
+      "latency_ms": 2.29,
+      "speed_mbps": 0.0,
+      "colo": "N/A"
+    },
+    {
+      "ip": "162.159.197.238",
+      "loss": 0.0,
+      "latency_ms": 2.33,
+      "speed_mbps": 0.0,
+      "colo": "N/A"
+    },
+    {
+      "ip": "104.18.207.159",
+      "loss": 0.0,
+      "latency_ms": 2.34,
+      "speed_mbps": 0.0,
+      "colo": "N/A"
+    },
+    {
+      "ip": "172.65.254.6",
+      "loss": 0.0,
+      "latency_ms": 2.36,
+      "speed_mbps": 0.0,
+      "colo": "N/A"
+    },
+    {
+      "ip": "162.159.192.77",
+      "loss": 0.0,
+      "latency_ms": 2.36,
+      "speed_mbps": 0.0,
+      "colo": "N/A"
+    },
+    {
+      "ip": "162.159.192.175",
+      "loss": 0.0,
+      "latency_ms": 2.37,
+      "speed_mbps": 0.0,
+      "colo": "N/A"
+    },
+    {
+      "ip": "104.18.15.94",
+      "loss": 0.0,
+      "latency_ms": 2.4,
+      "speed_mbps": 0.0,
+      "colo": "N/A"
+    },
+    {
+      "ip": "162.159.213.157",
+      "loss": 0.0,
+      "latency_ms": 2.45,
+      "speed_mbps": 0.0,
+      "colo": "N/A"
+    },
+    {
+      "ip": "190.93.244.219",
+      "loss": 0.0,
+      "latency_ms": 2.47,
+      "speed_mbps": 0.0,
+      "colo": "N/A"
+    }
+  ]
 }
