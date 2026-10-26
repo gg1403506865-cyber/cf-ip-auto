@@ -35,7 +35,7 @@ jobs:
 
       - name: Run speed test
         run: |
-          ./cfst_linux_amd64/cfst -f ip.txt -tl 150 -t 200 -dn 3 -p 20 -o result.csv || true
+          ./cfst_linux_amd64/cfst -f ip.txt -tl 150 -t 200 -dd -p 20 -o result.csv || true
           echo "--- raw result ---"
           if [ ! -f result.csv ]; then
             echo "::error::result.csv 未生成，测速失败"
