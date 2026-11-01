@@ -1,5 +1,5 @@
 {
-  "updated": "2026-11-01T14:47:04Z",
+  "updated": "2026-11-01T23:29:06Z",
   "count": 35,
   "total_tested": 35,
   "mode": "latency_only",
@@ -7,247 +7,247 @@
   "warning": "仅测延迟未测速度。这是机房到 Cloudflare 的 RTT，不代表你的实际速度，只说明该 IP 当前可达",
   "ips": [
     {
-      "ip": "198.41.204.109",
-      "loss": 0.0,
-      "latency_ms": 5.28,
-      "speed_mbps": 0.0,
-      "colo": "N/A"
-    },
-    {
-      "ip": "172.65.185.103",
-      "loss": 0.0,
-      "latency_ms": 5.32,
-      "speed_mbps": 0.0,
-      "colo": "N/A"
-    },
-    {
-      "ip": "172.66.154.167",
-      "loss": 0.0,
-      "latency_ms": 5.33,
-      "speed_mbps": 0.0,
-      "colo": "N/A"
-    },
-    {
-      "ip": "162.159.192.77",
-      "loss": 0.0,
-      "latency_ms": 5.33,
-      "speed_mbps": 0.0,
-      "colo": "N/A"
-    },
-    {
       "ip": "162.159.192.175",
       "loss": 0.0,
-      "latency_ms": 5.33,
-      "speed_mbps": 0.0,
-      "colo": "N/A"
-    },
-    {
-      "ip": "104.17.41.173",
-      "loss": 0.0,
-      "latency_ms": 5.34,
-      "speed_mbps": 0.0,
-      "colo": "N/A"
-    },
-    {
-      "ip": "104.16.219.121",
-      "loss": 0.0,
-      "latency_ms": 5.34,
-      "speed_mbps": 0.0,
-      "colo": "N/A"
-    },
-    {
-      "ip": "162.159.22.242",
-      "loss": 0.0,
-      "latency_ms": 5.34,
-      "speed_mbps": 0.0,
-      "colo": "N/A"
-    },
-    {
-      "ip": "104.19.53.203",
-      "loss": 0.0,
-      "latency_ms": 5.37,
+      "latency_ms": 9.15,
       "speed_mbps": 0.0,
       "colo": "N/A"
     },
     {
       "ip": "162.159.213.157",
       "loss": 0.0,
-      "latency_ms": 5.37,
+      "latency_ms": 9.18,
       "speed_mbps": 0.0,
       "colo": "N/A"
     },
     {
-      "ip": "104.19.107.37",
+      "ip": "162.159.192.77",
       "loss": 0.0,
-      "latency_ms": 5.37,
-      "speed_mbps": 0.0,
-      "colo": "N/A"
-    },
-    {
-      "ip": "172.67.109.137",
-      "loss": 0.0,
-      "latency_ms": 5.38,
-      "speed_mbps": 0.0,
-      "colo": "N/A"
-    },
-    {
-      "ip": "104.16.196.96",
-      "loss": 0.0,
-      "latency_ms": 5.38,
-      "speed_mbps": 0.0,
-      "colo": "N/A"
-    },
-    {
-      "ip": "162.159.41.102",
-      "loss": 0.0,
-      "latency_ms": 5.4,
-      "speed_mbps": 0.0,
-      "colo": "N/A"
-    },
-    {
-      "ip": "190.93.247.67",
-      "loss": 0.0,
-      "latency_ms": 5.4,
-      "speed_mbps": 0.0,
-      "colo": "N/A"
-    },
-    {
-      "ip": "162.159.11.9",
-      "loss": 0.0,
-      "latency_ms": 5.4,
-      "speed_mbps": 0.0,
-      "colo": "N/A"
-    },
-    {
-      "ip": "162.159.197.238",
-      "loss": 0.0,
-      "latency_ms": 5.4,
-      "speed_mbps": 0.0,
-      "colo": "N/A"
-    },
-    {
-      "ip": "162.159.1.34",
-      "loss": 0.0,
-      "latency_ms": 5.41,
-      "speed_mbps": 0.0,
-      "colo": "N/A"
-    },
-    {
-      "ip": "162.159.20.208",
-      "loss": 0.0,
-      "latency_ms": 5.41,
-      "speed_mbps": 0.0,
-      "colo": "N/A"
-    },
-    {
-      "ip": "198.41.216.173",
-      "loss": 0.0,
-      "latency_ms": 5.42,
-      "speed_mbps": 0.0,
-      "colo": "N/A"
-    },
-    {
-      "ip": "190.93.244.219",
-      "loss": 0.0,
-      "latency_ms": 5.43,
+      "latency_ms": 9.19,
       "speed_mbps": 0.0,
       "colo": "N/A"
     },
     {
       "ip": "198.41.197.204",
       "loss": 0.0,
-      "latency_ms": 5.43,
+      "latency_ms": 9.19,
       "speed_mbps": 0.0,
       "colo": "N/A"
     },
     {
       "ip": "172.65.254.6",
       "loss": 0.0,
-      "latency_ms": 5.44,
+      "latency_ms": 9.23,
+      "speed_mbps": 0.0,
+      "colo": "N/A"
+    },
+    {
+      "ip": "162.159.197.238",
+      "loss": 0.0,
+      "latency_ms": 9.24,
       "speed_mbps": 0.0,
       "colo": "N/A"
     },
     {
       "ip": "162.159.155.204",
       "loss": 0.0,
-      "latency_ms": 5.44,
-      "speed_mbps": 0.0,
-      "colo": "N/A"
-    },
-    {
-      "ip": "104.18.15.94",
-      "loss": 0.0,
-      "latency_ms": 5.45,
-      "speed_mbps": 0.0,
-      "colo": "N/A"
-    },
-    {
-      "ip": "104.18.207.159",
-      "loss": 0.0,
-      "latency_ms": 5.49,
-      "speed_mbps": 0.0,
-      "colo": "N/A"
-    },
-    {
-      "ip": "188.114.99.183",
-      "loss": 0.0,
-      "latency_ms": 8.99,
-      "speed_mbps": 0.0,
-      "colo": "N/A"
-    },
-    {
-      "ip": "188.114.98.147",
-      "loss": 0.0,
-      "latency_ms": 9.06,
-      "speed_mbps": 0.0,
-      "colo": "N/A"
-    },
-    {
-      "ip": "104.21.115.157",
-      "loss": 0.0,
-      "latency_ms": 9.27,
-      "speed_mbps": 0.0,
-      "colo": "N/A"
-    },
-    {
-      "ip": "188.114.98.18",
-      "loss": 0.0,
-      "latency_ms": 9.39,
-      "speed_mbps": 0.0,
-      "colo": "N/A"
-    },
-    {
-      "ip": "188.114.98.242",
-      "loss": 0.0,
-      "latency_ms": 9.52,
+      "latency_ms": 9.24,
       "speed_mbps": 0.0,
       "colo": "N/A"
     },
     {
       "ip": "188.114.98.41",
       "loss": 0.0,
-      "latency_ms": 9.59,
-      "speed_mbps": 0.0,
-      "colo": "N/A"
-    },
-    {
-      "ip": "188.114.98.233",
-      "loss": 0.0,
-      "latency_ms": 9.86,
-      "speed_mbps": 0.0,
-      "colo": "N/A"
-    },
-    {
-      "ip": "104.21.50.32",
-      "loss": 0.0,
-      "latency_ms": 9.89,
+      "latency_ms": 9.25,
       "speed_mbps": 0.0,
       "colo": "N/A"
     },
     {
       "ip": "188.114.96.103",
       "loss": 0.0,
-      "latency_ms": 10.55,
+      "latency_ms": 9.27,
+      "speed_mbps": 0.0,
+      "colo": "N/A"
+    },
+    {
+      "ip": "198.41.204.109",
+      "loss": 0.0,
+      "latency_ms": 9.28,
+      "speed_mbps": 0.0,
+      "colo": "N/A"
+    },
+    {
+      "ip": "162.159.20.208",
+      "loss": 0.0,
+      "latency_ms": 9.29,
+      "speed_mbps": 0.0,
+      "colo": "N/A"
+    },
+    {
+      "ip": "162.159.1.34",
+      "loss": 0.0,
+      "latency_ms": 9.29,
+      "speed_mbps": 0.0,
+      "colo": "N/A"
+    },
+    {
+      "ip": "104.19.53.203",
+      "loss": 0.0,
+      "latency_ms": 9.3,
+      "speed_mbps": 0.0,
+      "colo": "N/A"
+    },
+    {
+      "ip": "172.65.185.103",
+      "loss": 0.0,
+      "latency_ms": 9.32,
+      "speed_mbps": 0.0,
+      "colo": "N/A"
+    },
+    {
+      "ip": "198.41.216.173",
+      "loss": 0.0,
+      "latency_ms": 9.33,
+      "speed_mbps": 0.0,
+      "colo": "N/A"
+    },
+    {
+      "ip": "188.114.98.233",
+      "loss": 0.0,
+      "latency_ms": 9.33,
+      "speed_mbps": 0.0,
+      "colo": "N/A"
+    },
+    {
+      "ip": "190.93.247.67",
+      "loss": 0.0,
+      "latency_ms": 9.33,
+      "speed_mbps": 0.0,
+      "colo": "N/A"
+    },
+    {
+      "ip": "188.114.99.183",
+      "loss": 0.0,
+      "latency_ms": 9.35,
+      "speed_mbps": 0.0,
+      "colo": "N/A"
+    },
+    {
+      "ip": "104.21.115.157",
+      "loss": 0.0,
+      "latency_ms": 9.35,
+      "speed_mbps": 0.0,
+      "colo": "N/A"
+    },
+    {
+      "ip": "162.159.22.242",
+      "loss": 0.0,
+      "latency_ms": 9.35,
+      "speed_mbps": 0.0,
+      "colo": "N/A"
+    },
+    {
+      "ip": "104.21.50.32",
+      "loss": 0.0,
+      "latency_ms": 9.36,
+      "speed_mbps": 0.0,
+      "colo": "N/A"
+    },
+    {
+      "ip": "162.159.41.102",
+      "loss": 0.0,
+      "latency_ms": 9.37,
+      "speed_mbps": 0.0,
+      "colo": "N/A"
+    },
+    {
+      "ip": "104.18.207.159",
+      "loss": 0.0,
+      "latency_ms": 9.37,
+      "speed_mbps": 0.0,
+      "colo": "N/A"
+    },
+    {
+      "ip": "172.66.154.167",
+      "loss": 0.0,
+      "latency_ms": 9.39,
+      "speed_mbps": 0.0,
+      "colo": "N/A"
+    },
+    {
+      "ip": "104.16.219.121",
+      "loss": 0.0,
+      "latency_ms": 9.39,
+      "speed_mbps": 0.0,
+      "colo": "N/A"
+    },
+    {
+      "ip": "104.18.15.94",
+      "loss": 0.0,
+      "latency_ms": 9.4,
+      "speed_mbps": 0.0,
+      "colo": "N/A"
+    },
+    {
+      "ip": "162.159.11.9",
+      "loss": 0.0,
+      "latency_ms": 9.41,
+      "speed_mbps": 0.0,
+      "colo": "N/A"
+    },
+    {
+      "ip": "104.16.196.96",
+      "loss": 0.0,
+      "latency_ms": 9.43,
+      "speed_mbps": 0.0,
+      "colo": "N/A"
+    },
+    {
+      "ip": "188.114.98.147",
+      "loss": 0.0,
+      "latency_ms": 9.44,
+      "speed_mbps": 0.0,
+      "colo": "N/A"
+    },
+    {
+      "ip": "188.114.98.18",
+      "loss": 0.0,
+      "latency_ms": 9.44,
+      "speed_mbps": 0.0,
+      "colo": "N/A"
+    },
+    {
+      "ip": "190.93.244.219",
+      "loss": 0.0,
+      "latency_ms": 9.45,
+      "speed_mbps": 0.0,
+      "colo": "N/A"
+    },
+    {
+      "ip": "172.67.109.137",
+      "loss": 0.0,
+      "latency_ms": 9.47,
+      "speed_mbps": 0.0,
+      "colo": "N/A"
+    },
+    {
+      "ip": "104.19.107.37",
+      "loss": 0.0,
+      "latency_ms": 9.5,
+      "speed_mbps": 0.0,
+      "colo": "N/A"
+    },
+    {
+      "ip": "104.17.41.173",
+      "loss": 0.0,
+      "latency_ms": 9.54,
+      "speed_mbps": 0.0,
+      "colo": "N/A"
+    },
+    {
+      "ip": "188.114.98.242",
+      "loss": 0.0,
+      "latency_ms": 9.56,
       "speed_mbps": 0.0,
       "colo": "N/A"
     }
